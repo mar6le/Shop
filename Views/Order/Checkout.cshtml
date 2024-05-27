@@ -1,0 +1,66 @@
+﻿@model Order
+
+
+    <h3>Ordering</h3>
+    <form asp-action="Checkout" method="post" class="form-horizontal">
+        <div class="form-group">
+            <label asp-for="FirstName"></label>
+            <div class="col-md-5">
+                <input asp-for="FirstName" class="form-group" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="LastName"></label>
+            <div class="col-md-5">
+                <input asp-for="LastName" class="form-group" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Address"></label>
+            <div class="col-md-5">
+                <input asp-for="Address" class="form-group" />
+                <span asp-validation-for="Address" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="City"></label>
+            <div class="col-md-5">
+                <input asp-for="City" class="form-group" />
+                <span asp-validation-for="City" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="State"></label>
+            <div class="col-md-5">
+                <input asp-for="State" class="form-group" />
+                <span asp-validation-for="State" class="text-danger"></span>
+            </div>
+        </div>
+       
+        <div class="form-group">
+            <label asp-for="Country"></label>
+            <div class="col-md-5">
+                <input asp-for="Country" class="form-group" />
+                <span asp-validation-for="Country" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <label asp-for="Phone"></label>
+            <div class="col-md-5">
+                <input asp-for="Phone" class="form-group" />
+                <span asp-validation-for="Phone" class="text-danger"></span>
+            </div>
+        </div>
+      
+        <div class="form-group">
+            <label asp-for="Email"></label>
+            <div class="col-md-5">
+                <input asp-for="Email" class="form-group" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+        </div>
+        <input class="btn-btn-success"type="submit" value="Finish Order" />
+    </form>
+</div>

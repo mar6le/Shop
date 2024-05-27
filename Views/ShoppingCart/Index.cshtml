@@ -1,0 +1,52 @@
+﻿@model ShoppingCartViewModel
+
+
+
+@{
+    Layout = "_Layout2";
+}
+
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+               Name
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+               Price
+            </th>
+           
+            <th></th>
+        </tr>
+    </thead>
+   
+        @foreach (var item in Model.shoppingCart.ListCartItems)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Product.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Product.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Product.Price)
+                </td>
+                <td>
+            <a asp-controller="ShoppingCart" asp-action="RemoveFromShoppingCart" asp-route-ProductId="@item.Product.ProductId">Remove</a>
+            </td>
+            <td>
+                <a class="btn btn-danger" asp-controller="Order" asp-action="Checkout">Checkout</a>
+            </td>
+            </tr>
+        }
+        
+    </>
+  
+</table>
